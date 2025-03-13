@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Our Profile</a></li>
+                <li><a href="#contact">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1>Hi <span id="username"></span>, Welcome to Our School</h1>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="updateUsername()">Submit</button>
+    </section>
+    
+    <section id="profile">
+        <h2>Our Profile</h2>
+        <img src="images/school_banner.jpg" alt="School Banner">
+        <p>Welcome to our school! We strive for excellence in education and personal growth.</p>
+        <h3>Vision & Mission</h3>
+        <p>Our vision is to nurture future leaders with integrity and knowledge.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Message Us</h2>
+        <form id="contactForm" onsubmit="validateForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required pattern="[0-9]{10,12}">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+        <p id="formOutput"></p>
+    </section>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
